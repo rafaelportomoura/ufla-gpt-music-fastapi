@@ -4,7 +4,7 @@ Este projeto foi desenvolvido como parte da disciplina de Sistemas Distribuídos
 
 ## Tecnologias Utilizadas
 
-- Python 3.9
+- Python 3.11
 - FastAPI
 - Docker
 - Docker Compose
