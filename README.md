@@ -48,3 +48,4 @@ docker-compose up --build
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
 - [Docker Documentation](https://docs.docker.com/)
 - [ChatGPT Documentation](https://platform.openai.com/docs/guides/gpt)
+- [CSS Loading](https://loading.io/css/)

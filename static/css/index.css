@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
+
+body,
+header,
+section {
+  width: 100vw;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Orbit', sans-serif;
+  color: #fff;
+}
+
+#input-search {
+  width: 50vw;
+  border-radius: 25px;
+  padding: 10px;
+  text-align: center;
+  height: 40px;
+  font-family: 'Orbit', sans-serif;
+}
+
+#cards {
+  margin-top: 40px;
+  width: 100vw;
+  height: 60vh;
+}
