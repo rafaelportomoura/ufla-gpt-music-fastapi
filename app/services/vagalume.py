@@ -1,5 +1,5 @@
 import requests
-from services.webscraping import extrair_link_youtube
+from webscraping import extrair_link_capa
 
 
 class VagalumeError(Exception):
@@ -23,7 +23,7 @@ class Vagalume:
             data = response.json()["response"]["docs"][0]
 
             data["vagalume"] = f"{self.SITE}{data['url']}"
-            data["youtube"] = extrair_link_youtube(data["vagalume"])
+            data["capa"] = extrair_link_capa(data["vagalume"])
 
             return data
         else:

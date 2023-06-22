@@ -9,20 +9,20 @@ class WebScrapingError(Exception):
         super().__init__(*args)
 
 
-def extrair_link_youtube(url: str) -> str | None:
+def extrair_link_capa(url: str) -> str | None:
     response = requests.get(url)
 
     soup = BeautifulSoup(response.text, "html.parser")
 
     if response.status_code != 200:
-        raise WebScrapingError("Erro na requisição de extrair :", response.status_code)
+        raise WebScrapingError("Erro na requisição de extrair capa:", response.status_code)
 
-    video_link = None
+    capa = None
 
     # Encontre a tag <iframe> com um padrão de URL do YouTube
-    iframe = soup.find("a", src=re.compile(r"(https?://www\.youtube\.com/.*)"))
+    imagem_capa = soup.find('meta', property='og:image')
 
-    if iframe:
-        video_link = iframe["src"]
+    if imagem_capa:
+        capa = imagem_capa["content"]
 
-    return video_link
+    return capa
