@@ -1,6 +1,6 @@
 # Projeto de Sistemas Distribuídos - Sugeridor de Músicas
 
-Este projeto foi desenvolvido como parte da disciplina de Sistemas Distribuídos da Universidade Federal de Lavras. O objetivo projeto é criar um site que sugere 5 músicas com links para o YouTube a partir do texto inserido pelo usuário. O site também terá integração com o chatbot GPT para fornecer sugestões personalizadas com base nas conversas com o usuário.
+Este projeto foi desenvolvido como parte da disciplina de Sistemas Distribuídos da Universidade Federal de Lavras. O objetivo projeto é criar um site que sugere 3 músicas com links para o YouTube a partir do texto inserido pelo usuário. O site também terá integração com o chatbot GPT para fornecer sugestões personalizadas com base nas conversas com o usuário.
 
 ## Tecnologias Utilizadas
 
