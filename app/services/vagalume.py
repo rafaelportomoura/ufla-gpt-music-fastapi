@@ -1,4 +1,5 @@
 import requests
+import re
 from services.webscraping import extrair_link_capa
 
 
@@ -12,18 +13,32 @@ class Vagalume:
         self.API = "https://api.vagalume.com.br"
         self.SITE = "https://vagalume.com.br"
         self.SEARCH = f"{self.API}/search"
-        self.SEARCH_ARTMUS = f"{self.SEARCH}.artmus"
+        self.SEARCH_MUS = f"{self.SEARCH}.excerpt"
 
     def get_art_mus(self, query: str) -> dict | None:
         parametros = {"q": query, "limit": 1}
 
-        response = requests.get(self.SEARCH_ARTMUS, params=parametros)
+        response = requests.get(self.SEARCH_MUS, params=parametros)
 
         if response.status_code == 200:
-            data = response.json()["response"]["docs"][0]
+            docs = response.json()["response"]["docs"]
+
+            if len(docs) == 0:
+                data = {
+                    "vagalume": "",
+                    "capa": "",
+                    "Artist": "NotFound",
+                    "Band": "NotFound",
+                }
+                return data
+
+            data = docs[0]
 
             data["vagalume"] = f"{self.SITE}{data['url']}"
-            data["capa"] = extrair_link_capa(data["vagalume"])
+            capa = extrair_link_capa(data["vagalume"])
+
+            regex = re.compile(r"^\/|^[^h]")
+            data["capa"] = f"{self.SITE}{capa}" if regex.match(capa) else capa
 
             return data
         else:
