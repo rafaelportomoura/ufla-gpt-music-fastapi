@@ -5,6 +5,11 @@ body,
 header,
 section {
   width: 100vw;
+  margin: 0px !important;
+}
+
+.vsc-initialized {
+  margin: 0px !important;
 }
 
 body {
@@ -14,24 +19,56 @@ body {
 .container {
   width: 100vw;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: 'Orbit', sans-serif;
   color: #fff;
 }
 
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.cards {
+  flex-wrap: wrap;
+}
+
 #input-search {
+  background: #fff;
   width: 50vw;
-  border-radius: 25px;
   padding: 10px;
+  border-radius: 25px;
   text-align: center;
   height: 40px;
   font-family: 'Orbit', sans-serif;
 }
 
-#cards {
+#cards-section {
   margin-top: 40px;
   width: 100vw;
   height: 60vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card {
+  width: 260px;
+  height: 300px;
+  display: flex;
+  justify-content: top;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  border-radius: 25px;
+  margin: 20px;
+  padding: 10px;
+  background: white;
+}
+.card #description {
 }

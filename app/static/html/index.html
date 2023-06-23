@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="{{ url_for('static', path='assets/icon.png') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='css/index.css') }}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='css/loading.css') }}" media="screen" />
+  <title>GPT Music</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="container column">
+      <h1>GPT MUSIC</h1>
+    </div>
+    <div class="container column">
+      <input id="input-search" type="text" placeholder="Type here..." />
+    </div>
+  </header>
+  <section id="cards-section" class="container row cards"></section>
+
+</body>
+<script src="{{ url_for('static', path='js/index.js') }}"></script>
+
+</html>
