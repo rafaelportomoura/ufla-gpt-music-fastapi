@@ -4,7 +4,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from services.vagalume import Vagalume
+from services.music import Music
 
 app = FastAPI()
 
@@ -21,7 +21,7 @@ async def read_item(request: Request) -> HTMLResponse:
     return templates.TemplateResponse("index.html", {"request": request})
 
 
-@app.get("/vagalume", response_class=JSONResponse)
+@app.get("/music", response_class=JSONResponse)
 async def get_musics(q: str) -> JSONResponse:
-    v = Vagalume()
-    return v.get_art_mus(q)
+    m = Music()
+    return m.get_musics(m)

@@ -5,14 +5,20 @@ const CARDS_HTML = `
 
 const cards = document.getElementById('cards');
 
-function getCards() {
+async function getCards() {
   console.log('INIT');
   loading = createLoading();
   cards.appendChild(loading);
+  await getMusics();
   setTimeout(() => {
     console.log('END');
     cards.removeChild(loading);
   }, 3000);
+}
+
+async function getMusics() {
+  const response = await fetch('/musics');
+  console.log(response);
 }
 
 function createLoading() {
