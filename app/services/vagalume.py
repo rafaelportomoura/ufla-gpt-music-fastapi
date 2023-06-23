@@ -1,5 +1,5 @@
 import requests
-from webscraping import extrair_link_capa
+from services.webscraping import extrair_link_capa
 
 
 class VagalumeError(Exception):

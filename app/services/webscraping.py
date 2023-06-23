@@ -18,8 +18,7 @@ def extrair_link_capa(url: str) -> str | None:
         raise WebScrapingError("Erro na requisição de extrair capa:", response.status_code)
 
     capa = None
-
-    # Encontre a tag <iframe> com um padrão de URL do YouTube
+    
     imagem_capa = soup.find('meta', property='og:image')
 
     if imagem_capa:
