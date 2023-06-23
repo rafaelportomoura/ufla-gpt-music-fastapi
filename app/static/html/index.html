@@ -12,33 +12,18 @@
 <body>
 
   <header>
-    <div class="container">
+    <div class="container column">
       <h1>GPT MUSIC</h1>
     </div>
-    <div class="container">
-
+    <div class="container column">
       <input id="input-search" type="text" placeholder="Type here..." />
+      <button id="input-button" onclick="getCards()">Buscar</button>
     </div>
   </header>
-  <div id="loading" class="container">
-    <div class="lds-default">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-  <section id="cards">
+  <section id="cards" class="container row cards">
   </section>
 
 </body>
+<script src="{{ url_for('static', path='js/index.js') }}"></script>
 
 </html>

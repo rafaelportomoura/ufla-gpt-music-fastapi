@@ -14,17 +14,29 @@ body {
 .container {
   width: 100vw;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: 'Orbit', sans-serif;
   color: #fff;
 }
 
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.cards {
+  flex-wrap: wrap;
+}
+
 #input-search {
+  background: #fff;
   width: 50vw;
-  border-radius: 25px;
   padding: 10px;
+  border-radius: 25px;
   text-align: center;
   height: 40px;
   font-family: 'Orbit', sans-serif;
