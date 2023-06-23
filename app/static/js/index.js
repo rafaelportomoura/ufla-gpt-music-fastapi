@@ -1,15 +1,12 @@
 const CARDS_HTML = document.getElementById('cards-section');
 const input = document.getElementById('input-search');
 
-let timer;
-
-input.addEventListener('input', function () {
-  clearTimeout(timer);
-
-  timer = setTimeout(async () => {
+async function verificarEnter(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
     await getCards();
-  }, 1000);
-});
+  }
+}
 
 async function removeAllCards() {
   if (CARDS_HTML.childNodes) {
