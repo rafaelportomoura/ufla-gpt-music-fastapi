@@ -72,3 +72,9 @@ a {
 }
 .card #description {
 }
+
+.credits {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
