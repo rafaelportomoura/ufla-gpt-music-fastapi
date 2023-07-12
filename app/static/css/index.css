@@ -70,11 +70,13 @@ a {
   padding: 10px;
   background: white;
 }
-.card #description {
-}
 
 .credits {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
