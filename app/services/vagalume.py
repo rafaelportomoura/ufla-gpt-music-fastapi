@@ -15,7 +15,7 @@ class Vagalume:
         self.SEARCH = f"{self.API}/search"
         self.SEARCH_MUS = f"{self.SEARCH}.excerpt"
 
-    def get_art_mus(self, query: str) -> dict | None:
+    def get_mus(self, query: str) -> dict | None:
         parametros = {"q": query, "limit": 1}
 
         response = requests.get(self.SEARCH_MUS, params=parametros)

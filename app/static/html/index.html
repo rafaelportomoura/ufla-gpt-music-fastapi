@@ -7,17 +7,17 @@
   <link rel="shortcut icon" type="image/png" href="{{ url_for('static', path='assets/icon.png') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='css/index.css') }}" media="screen" />
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='css/loading.css') }}" media="screen" />
-  <title>GPT Music</title>
+  <title>GPT {{title}}</title>
 </head>
 
 <body>
 
   <header>
     <div class="container column">
-      <h1>GPT MUSIC</h1>
+      <h1 class="uppercase">GPT {{title}}</h1>
     </div>
     <div class="container column">
-      <input id="input-search" type="text" onkeydown="verificarEnter(event)" placeholder="Type here..." />
+      <input id="input-search" type="text" onkeydown="verificarEnter(event,'{{script}}')" placeholder="Type here..." />
     </div>
   </header>
   <section id="cards-section" class="container row cards"></section>
@@ -27,7 +27,7 @@
       <h1>Alunos</h1>
     </div>
     <div class="container credits">
-      <p>Rafael Porto</p>
+      <p>Rafael Moura</p>
       <p>Guilherme Baesse</p>
       <p>Marco Antônio</p>
       <p>Mateus</p>
@@ -37,6 +37,8 @@
   </footer>
 
 </body>
+<script src="{{ url_for('static', path='js/loading.js') }}"></script>
+<script src="{{ url_for('static', path='js/'~ script ~'.js') }}"></script>
 <script src="{{ url_for('static', path='js/index.js') }}"></script>
 
 </html>
