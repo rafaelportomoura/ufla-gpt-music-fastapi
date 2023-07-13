@@ -22,6 +22,6 @@ class Gpt:
         print(response.json())
 
         if(response.status_code == 200):
-            result_list = response.json()["choices"][0]["message"]["content"].split(',');
+            result_list = response.json()["choices"][0]["message"]["content"].split(';');
 
         return result_list
