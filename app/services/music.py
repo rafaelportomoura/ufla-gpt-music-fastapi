@@ -7,8 +7,8 @@ class Music:
         self.vagalume = vagalume
         self.gpt = gpt
 
-    def get_musics(self, music: str) -> list:
-        prompt = f"Recomende 3 músicas semelhantes a '{music}'."
+    def get_musics(self, query: str) -> list:
+        prompt = f"Recomende 3 músicas semelhantes a '{query}'."
         suggestions = self.gpt.suggestions(prompt)
 
         musics = []
