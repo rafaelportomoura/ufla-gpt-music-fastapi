@@ -17,10 +17,11 @@ class Gpt:
             "messages": [{"role": "user", "content": query}],
             "temperature": 0.7
         }
-        response = requests.post(self.url, params=params, headers=self.headers)
+        response = requests.post(self.url, json=params, headers=self.headers)
         result_list = []
+        print(response.json())
 
         if(response.status_code == 200):
-            result_list = response.json()["choices"][0]["message"]["content"].split(',');
+            result_list = response.json()["choices"][0]["message"]["content"].split(';');
 
         return result_list
