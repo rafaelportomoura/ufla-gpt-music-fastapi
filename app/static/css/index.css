@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
 
+body {
+  height: 100vh;
+}
+
 body,
 header,
 section {
@@ -13,7 +17,7 @@ section {
 }
 
 body {
-  background-color: black;
+  background: linear-gradient(#e66465, #9198e5);
 }
 
 .container {
@@ -41,6 +45,7 @@ body {
   background: #fff;
   width: 50vw;
   padding: 10px;
+  border-color: #9198e5;
   border-radius: 25px;
   text-align: center;
   height: 40px;
@@ -64,11 +69,15 @@ a {
   justify-content: top;
   align-items: center;
   flex-direction: column;
-  color: black;
+  color: white;
   border-radius: 25px;
+  font-size: small;
   margin: 20px;
   padding: 10px;
-  background: white;
+  background: rgba(0, 0, 0, 0.352);
+  overflow-y: scroll;
+  overflow: hidden;
+  scroll-snap-type: y mandatory;
 }
 
 .credits {
