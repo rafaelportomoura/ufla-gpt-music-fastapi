@@ -15,7 +15,6 @@ class Gpt:
         params = {
             "model": "gpt-3.5-turbo",
             "messages": [{"role": "user", "content": query}],
-            "temperature": 0.7
         }
         response = requests.post(self.url, json=params, headers=self.headers)
         result_list = []
